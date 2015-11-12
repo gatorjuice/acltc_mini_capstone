@@ -1,8 +1,12 @@
 <% @products.each do |product| %>
-  <div class="product">
+
+<div class="product">
+  <a href="" class="product_link">
     <%= image_tag(product.image) %>
     <h3><%= product.name %></h3>
     <h4>$<%= product.price %></h4>
     <p><%= product.description %></p>
-  </div>
+  </a>
+</div>
+
 <% end %>

@@ -7,9 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <h1 class="title">Land Mall</h1>
-  <p class="tag">everything you could ever need under one roof-puter.</p>
-<%= yield %>
+  <div class="container">
+    <h1 class="title">Land Mall</h1>
+    <p class="tag">everything you could ever need under one roof-puter.</p>
 
+    <div class="row">
+      <div class="col-md-2">
+        <ul class="nav">
+          <%= link_to 'home', '/' %>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
