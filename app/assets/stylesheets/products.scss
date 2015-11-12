@@ -2,7 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
 .product {
+  
+  border: 2px solid black;
+  padding: 10px;
+  margin: 5px;
 
   img {
     width: 90px;
@@ -10,10 +19,6 @@
 
   h3 {
     color: red;    
-  }
-
-  a {
-    text-decoration: none;
   }
 
 }

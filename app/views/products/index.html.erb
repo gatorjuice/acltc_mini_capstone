@@ -1,12 +1,46 @@
-<% @products.each do |product| %>
-
-<div class="product">
-  <a href="" class="product_link">
-    <%= image_tag(product.image) %>
-    <h3><%= product.name %></h3>
-    <h4>$<%= product.price %></h4>
-    <p><%= product.description %></p>
-  </a>
+<div class="row">
+  <div class="col-md-4">
+    <% @products1.each do |product| %>
+    <a href="" class="product_link">
+      <div class="product">
+        <%= image_tag(product.image) %>
+        <h3><%= product.name %></h3>
+        <h4>$<%= product.price %></h4>
+        <p><%= product.description %></p>
+      </div>
+    </a>
+    <% end %>
+  </div>
+  <div class="col-md-4">
+    <% @products2.each do |product| %>
+    <a href="" class="product_link">
+      <div class="product">
+        <%= image_tag(product.image) %>
+        <h3><%= product.name %></h3>
+        <h4>$<%= product.price %></h4>
+        <p><%= product.description %></p>
+      </div>
+    </a>
+    <% end %>
+  </div>
+  <div class="col-md-4">
+  <% @products3.each do |product| %>
+    <a href="" class="product_link">
+      <div class="product">
+        <%= image_tag(product.image) %>
+        <h3><%= product.name %></h3>
+        <h4>$<%= product.price %></h4>
+        <p><%= product.description %></p>
+      </div>
+    </a>
+    <% end %>
+  </div>
 </div>
 
-<% end %>
+
+
+
+
+
+
+
