@@ -10,7 +10,7 @@
   <div class="container">
   <div class="header">
     <h1 class="title">Land Mall</h1>
-    <p class="tag">everything you could ever need under one roof-puter.</p>
+    <p class="tag">Stay Grounded with Land-Mall</p>
     </div>
     <div class="col-md-2">
       <ol class="nav aside">
@@ -20,8 +20,38 @@
         <li><%= link_to 'complaints', '/' %></li>
       </ol>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-8">
       <%= yield %>
+    </div>
+    <div class="col-md-2">
+
+
+
+
+
+
+
+      <h3>Jump to Product</h3>
+
+      <%= form_tag '/', method: :post do %>
+      <%= label_tag :id %>
+      <%= text_field_tag :id %>
+      <%= submit_tag 'Go to' %>
+
+      <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
   </div>
 </body>

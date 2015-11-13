@@ -17,7 +17,12 @@ class ProductsController < ApplicationController
   end
 
   def view
-    @product = Product.find_by(name: "Giant Rubber Rat")
+    @product = Product.find_by(id: params[:id])
+  end
+
+  def form_result
+    @message = params[:message]
+    @product = Product.find_by(id: params[:message])
   end
 
 end
