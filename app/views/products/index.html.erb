@@ -4,7 +4,7 @@
     <a href="" class="product_link">
       <div class="product">
         <%= image_tag(product.image) %>
-        <h3><%= product.name %></h3>
+        <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
         <h4>$<%= product.price %></h4>
         <p><%= product.description %></p>
       </div>
@@ -16,7 +16,7 @@
     <a href="" class="product_link">
       <div class="product">
         <%= image_tag(product.image) %>
-        <h3><%= product.name %></h3>
+        <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
         <h4>$<%= product.price %></h4>
         <p><%= product.description %></p>
       </div>
@@ -28,7 +28,7 @@
     <a href="" class="product_link">
       <div class="product">
         <%= image_tag(product.image) %>
-        <h3><%= product.name %></h3>
+        <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
         <h4>$<%= product.price %></h4>
         <p><%= product.description %></p>
       </div>

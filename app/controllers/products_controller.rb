@@ -1,5 +1,17 @@
 class ProductsController < ApplicationController
 
+  def new
+    @product = Product.new(name: "", price: "", image: "", description: "")
+  end
+
+  def create
+    @product = Product.create(name: params[:name], price: params[:price], image: params[:image], description: params[:description])
+    redirect_to '/products'
+    # File.open(Rails.root.join('app/assets', 'images', @product.image), 'wb') do |f|
+    #   f.write(@product.image)
+    # end
+  end
+
   def index 
     @products = Product.all
     @products1 = []
@@ -16,7 +28,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  def view
+  def show
     @product = Product.find_by(id: params[:id])
   end
 

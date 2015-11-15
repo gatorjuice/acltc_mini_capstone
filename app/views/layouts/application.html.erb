@@ -14,7 +14,7 @@
     </div>
     <div class="col-md-2">
       <ol class="nav aside">
-        <li><%= link_to 'home', '/' %></li>
+        <li><%= link_to 'home', '/products' %></li>
         <li><%= link_to 'orders', '/' %></li>
         <li><%= link_to 'returns', '/' %></li>
         <li><%= link_to 'complaints', '/' %></li>
@@ -24,34 +24,7 @@
       <%= yield %>
     </div>
     <div class="col-md-2">
-
-
-
-
-
-
-
-      <h3>Jump to Product</h3>
-
-      <%= form_tag '/', method: :post do %>
-      <%= label_tag :id %>
-      <%= text_field_tag :id %>
-      <%= submit_tag 'Go to' %>
-
-      <% end %>
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <%= link_to "Add a Product", '/products/new', class: "btn btn-default" %>
     </div>
   </div>
 </body>
