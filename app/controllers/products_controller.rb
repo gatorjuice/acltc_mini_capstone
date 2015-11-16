@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
 
   def new
-    @product = Product.new(name: "", price: "", image: "", description: "")
   end
 
   def create
@@ -10,6 +9,16 @@ class ProductsController < ApplicationController
     # File.open(Rails.root.join('app/assets', 'images', @product.image), 'wb') do |f|
     #   f.write(@product.image)
     # end
+  end
+
+  def edit
+    @product = Product.find_by(id: params[:id])
+  end
+
+  def update
+    @product = Product.find_by(id: params[:id])
+    @product.update(name: params[:name], price: params[:price], image: params[:image], description: params[:description])
+    redirect_to '/products'
   end
 
   def index 
@@ -36,5 +45,12 @@ class ProductsController < ApplicationController
     @message = params[:message]
     @product = Product.find_by(id: params[:message])
   end
+
+  def delete
+    @product = Product.find_by(id: params[:id])
+    @product.destroy
+    redirect_to "/products"
+  end
+
 
 end

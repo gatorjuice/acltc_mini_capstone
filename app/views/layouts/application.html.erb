@@ -8,9 +8,9 @@
 </head>
 <body>
   <div class="container">
-  <div class="header">
-    <h1 class="title">Land Mall</h1>
-    <p class="tag">Stay Grounded with Land-Mall</p>
+    <div class="header">
+      <h1 class="title">Land Mall</h1>
+      <p class="tag">Stay Grounded with Land Mall</p>
     </div>
     <div class="col-md-2">
       <ol class="nav aside">
@@ -19,13 +19,12 @@
         <li><%= link_to 'returns', '/' %></li>
         <li><%= link_to 'complaints', '/' %></li>
       </ol>
-    </div>
-    <div class="col-md-8">
-      <%= yield %>
-    </div>
-    <div class="col-md-2">
       <%= link_to "Add a Product", '/products/new', class: "btn btn-default" %>
     </div>
+    <div class="col-md-10">
+      <%= yield %>
+    </div>
+
   </div>
 </body>
 </html>

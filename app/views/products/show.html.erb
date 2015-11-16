@@ -1,6 +1,12 @@
-<div class="product_view">
+<div class="product_view product">
   <h1><%= @product.name %></h1>
-  <button type="button" class="btn btn-default">But NOW!!!</button>
+  <button type="button" class="btn btn-default">Buy NOW!!!</button>
   <%= image_tag(@product.image) %>
-  <%= @product.description %>
+  <p><%= @product.description %></p>
+  <div>
+  <%= link_to 'Edit', "/products/#{@product.id}/edit" %>
+  </div>
+  <div>
+  <%= link_to "Delete", "/products/#{@product.id}", method: :delete %>
+  </div>  
 </div>
