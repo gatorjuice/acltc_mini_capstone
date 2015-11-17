@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find_by(id: params[:id])
     @product.update(name: params[:name], price: params[:price], image: params[:image], description: params[:description])
-    redirect_to '/products'
+    redirect_to "/products/#{@product.id}"
   end
 
   def index 
@@ -46,11 +46,10 @@ class ProductsController < ApplicationController
     @product = Product.find_by(id: params[:message])
   end
 
-  def delete
+  def destroy
     @product = Product.find_by(id: params[:id])
     @product.destroy
     redirect_to "/products"
   end
-
 
 end

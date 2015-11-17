@@ -57,10 +57,31 @@ body {
 
 .product_view {
   img {
-    width: 500px;
+    width: 200px;
   }
 
   h1 {
-    color: white;
+    color: black;
+  }
+
+  .btn {
+    margin-bottom: 15px; 
+    transition: 0.5s;
+  }
+
+  .btn:hover {
+    
+    background-color: #00FF00;
+    transition: 1s;
+
+  }
+
+}
+
+input {
+  width: 100%;
+
+  .btn {
+    width: 20%;
   }
 }

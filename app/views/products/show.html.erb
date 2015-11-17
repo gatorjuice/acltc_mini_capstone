@@ -1,8 +1,8 @@
 <div class="product_view product">
   <h1><%= @product.name %></h1>
-  <button type="button" class="btn btn-default">Buy NOW!!!</button>
-  <%= image_tag(@product.image) %>
+  <button type="button" class="btn btn-default"><%= number_to_currency(@product.price) %></button>
   <p><%= @product.description %></p>
+  <%= image_tag(@product.image) %>
   <div>
   <%= link_to 'Edit', "/products/#{@product.id}/edit" %>
   </div>
