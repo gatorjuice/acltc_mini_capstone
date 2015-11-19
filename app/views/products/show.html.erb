@@ -1,6 +1,9 @@
 <div class="product_view">
   <h1><%= @product.name %></h1>
   <button type="button" class="btn btn-default"><%= number_to_currency(@product.price) %></button>
+  <p>Estimated Sales Tax: <%= number_to_currency(@product.sales_tax) %></p>
+  <p>Estimated Total: <%= number_to_currency(@product.total) %></p>
+  <p><%= @product.quantity %></p>
   <p><%= @product.description %></p>
   <%= image_tag(@product.image) %>
   <div>

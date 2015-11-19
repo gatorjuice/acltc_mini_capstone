@@ -2,6 +2,7 @@
   <div class="col-md-4">
     <% @products1.each do |product| %>
       <div class="product">
+        <p><%= product.price_callout %></p>
         <%= image_tag(product.image) %>
         <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
         <h4><%= number_to_currency(product.price) %></h4>
@@ -12,6 +13,7 @@
   <div class="col-md-4">
     <% @products2.each do |product| %>
       <div class="product">
+      <p><%= product.price_callout %></p>
         <%= image_tag(product.image) %>
         <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
         <h4><%= number_to_currency(product.price) %></h4>
@@ -22,6 +24,7 @@
   <div class="col-md-4">
   <% @products3.each do |product| %>
       <div class="product">
+      <p><%= product.price_callout %></p>
         <%= image_tag(product.image) %>
         <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
         <h4><%= number_to_currency(product.price) %></h4>
