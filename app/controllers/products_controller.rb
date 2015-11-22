@@ -23,8 +23,22 @@ class ProductsController < ApplicationController
     redirect_to "/products/#{@product.id}"
   end
 
-  def index 
-    @products = Product.all
+  def index
+    if params[:input_sort] && params[:input_sort_order] 
+      @products = Product.order(params[:input_sort] => params[:input_sort_order])
+    elsif params[:filter] == "discount_items"
+      @products = Product.where("price < ?", "2")
+    elsif params[:filter] == "random_item"
+      @products = Product.limit(1).order("RAND()")
+      redirect_to "/products/#{@products[0].id}"
+    elsif params[:search]
+      @products = Product.where("name LIKE ? OR description LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%")
+      # if @products.length == 1 
+      #   redirect_to "/products/#{@products[0].id}"
+      # end
+    else
+      @products = Product.all
+    end
     @products1 = []
     @products2 = []
     @products3 = []

@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Product.create!([
+  {name: "Giant Rubber Rat", price: "26.34", image: "bigrat.jpg", description: "This rat has it all, including size. Not simply ejected from a conveyor belt in the far east, this giant rubber rat was hand crafted in the USA.", stocked: nil, quantity: nil},
+  {name: "Horse Whisperer", price: "456.98", image: "horse_guy.jpg", description: "Is your horse acting up? Have no fear. You can count on our patent pending Horse Whisperers to soothe your foul beast into a lulled state of security. Just remember to feed it...the whisperer, not the horse...or wait.", stocked: nil, quantity: nil},
+  {name: "Beethoven's Toothbrush", price: "1000.0", image: "toothbrush.jpg", description: "Seems cheap right. We though so too. Brushing teeth back in the day was a weekly occurence, so it's easy to see why this thing is in such good shape. LIMIT 1!", stocked: nil, quantity: nil},
+  {name: "6,543 expired Nestle Crunch Bars", price: "199.99", image: "crunch.jpg", description: "We won't ask you why you need  ", stocked: nil, quantity: nil},
+  {name: "One Great Big Pancake", price: "21.0", image: "pancake.jpg", description: "Make your house a pancake house with this human sized pancake. It's giant and round and down for getting eaten.", stocked: nil, quantity: nil},
+  {name: "Dandy Fop", price: "989.76", image: "http://3.bp.blogspot.com/-5nUvM6fdtZE/T093eLFJlqI/AAAAAAAAd0s/qLKjppkojIw/s1600/dandy.jpg", description: "Not only are our dandy fop's exquisite, they are also most thoroughly outrageous. Need a date to the show? Our dandy's are hand delivered in order to assure you a grandiose affair.", stocked: nil, quantity: nil},
+  {name: "Tiny Piece of Used Wallpaper", price: "0.56", image: "http://diy.sndimg.com/content/dam/images/diy/fullset/2003/9/18/81/r116_7fa.jpg.rend.hgtvcom.1280.960.jpeg", description: "It's not illegal if we're the ones that break into a house and get the wall paper. THAT'S science fact.", stocked: nil, quantity: nil},
+  {name: "Award Winning Ski Boots", price: "123.0", image: "http://thebootpro.net/wp-content/uploads/2013/08/Lange-RS-90-SC-Ski-Boot-13-14.jpg", description: "Boot for dem hills yo", stocked: nil, quantity: nil}
+])
