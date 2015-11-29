@@ -1,0 +1,19 @@
+  
+
+
+<div class="row">
+<% @photos.each do |photo| %>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <%= image_tag(photo.url) %>
+      <div class="caption">
+        <h3><%= photo.product.name if photo.product %></h3>
+        <p><%= photo.product.description if photo.product %></p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
+
+

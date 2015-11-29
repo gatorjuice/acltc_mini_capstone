@@ -1,0 +1,9 @@
+<div class="product order-summary">
+<%= image_tag(@order.product.photos.first.url) if @order.product.photos.first %>
+<h1><%= @order.product.name %></h1>
+<p><%= @order.quantity %><p>
+<p><%= number_to_currency(@order.subtotal) %><p>
+<p><%= number_to_currency(@order.tax) %><p>
+<p><%= number_to_currency(@order.total) %><p>
+
+</div>

@@ -48,7 +48,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: acltc_mini_capstone_production
-  username: acltc_mini_capstone
-  password: <%= ENV['ACLTC_MINI_CAPSTONE_DATABASE_PASSWORD'] %>
+      database: acltc_mini_capstone-production
+      adapter: postgresql
+      encoding: unicode
+      pool: 5

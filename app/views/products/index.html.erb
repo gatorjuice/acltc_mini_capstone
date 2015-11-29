@@ -3,7 +3,7 @@
     <% @products1.each do |product| %>
       <div class="product">
         <p><%= product.price_callout %></p>
-        <%= image_tag(product.image) %>
+        <%= image_tag(product.photos.first.url) if product.photos.first %>
         <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
         <h4><%= number_to_currency(product.price) %></h4>
         <p><%= product.description %></p>
@@ -14,7 +14,7 @@
     <% @products2.each do |product| %>
       <div class="product">
       <p><%= product.price_callout %></p>
-        <%= image_tag(product.image) %>
+        <%= image_tag(product.photos.first.url) if product.photos.first %>
         <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
         <h4><%= number_to_currency(product.price) %></h4>
         <p><%= product.description %></p>
@@ -25,7 +25,7 @@
   <% @products3.each do |product| %>
       <div class="product">
       <p><%= product.price_callout %></p>
-        <%= image_tag(product.image) %>
+        <%= image_tag(product.photos.first.url) if product.photos.first %>
         <h3><a href="/products/<%= product.id %>"><%= product.name %></a></h3>
         <h4><%= number_to_currency(product.price) %></h4>
         <p><%= product.description %></p>

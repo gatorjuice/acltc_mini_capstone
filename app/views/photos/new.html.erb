@@ -1,0 +1,20 @@
+<div class="product">
+<%= form_tag "/photos", method: :post do %>
+<div class="form-group">
+<%= label_tag :url, "Image URL:" %>
+<%= text_field_tag :url %>
+</div>
+<div class="form-group">
+<%= label_tag :product_id, "product id" %>
+<%= text_field_tag :product_id %>
+</div>
+<%= submit_tag "Submit" %>
+<% end %>
+
+
+<ul>
+<% @selection.each do |selection| %>
+  <li><%= selection %></li>
+<% end %>
+</ul>
+</div>

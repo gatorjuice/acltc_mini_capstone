@@ -1,15 +1,31 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   root 'products#index'
   get '/products' => 'products#index'
   get '/products/new' => 'products#new'
   get '/products/:id' => 'products#show'
   post '/products' => 'products#create'
-
   get "/products/:id/edit" => 'products#edit'
   patch '/products/:id' => 'products#update'
-
   delete "/products/:id" => 'products#destroy'
+
+  get '/photos' => 'photos#index'
+  get '/photos/new' => 'photos#new'
+  get '/photos/:id' => 'photos#show'
+  post '/photos' => 'photos#create'
+  get "/photos/:id/edit" => 'photos#edit'
+  patch '/photos/:id' => 'photos#update'
+  delete "/photos/:id" => 'photos#destroy'
+
+  get '/orders' => 'orders#index'
+  get '/orders/new' => 'orders#new'
+  get '/orders/:id' => 'orders#show'
+  post '/orders' => 'orders#create'
+  get "/orders/:id/edit" => 'orders#edit'
+  patch '/orders/:id' => 'orders#update'
+  delete "/orders/:id" => 'orders#destroy'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

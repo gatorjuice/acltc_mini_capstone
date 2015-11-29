@@ -4,7 +4,13 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.create(name: params[:name], price: params[:price], image: params[:image], description: params[:description], quantity: params[:quantity])
+    @product = Product.create(
+      name: params[:name], 
+      price: params[:price], 
+      description: params[:description], 
+      quantity: params[:quantity],
+      user_id: current_user.id
+      )
     flash[:message] = "Product was Added."
     redirect_to '/products'
     # File.open(Rails.root.join('app/assets', 'images', @product.image), 'wb') do |f|
@@ -18,7 +24,12 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find_by(id: params[:id])
-    @product.update(name: params[:name], price: params[:price], image: params[:image], description: params[:description], quantity: params[:quantity])
+    @product.update(
+      name: params[:name], 
+      price: params[:price], 
+      description: params[:description], 
+      quantity: params[:quantity]
+      )
     flash[:info] = "Product was updated"
     redirect_to "/products/#{@product.id}"
   end
@@ -54,6 +65,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @photos = Photo.all
     @product = Product.find_by(id: params[:id])
   end
 
